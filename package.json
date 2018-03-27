@@ -1,0 +1,43 @@
+{
+  "name": "reactdojo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "truffle-compile": "truffle compile",
+    "build": "webpack",
+    "prestartmsg": "babel-node buildscripts/prestartmsg.js",
+    "start:webpack": "npm-run-all --parallel prestartmsg security-check servedist:webpack",
+    "share:webpack": "npm-run-all --parallel prestartmsg security-check servedist:webpack localtunnel",
+    "start:express": "npm-run-all --parallel prestartmsg security-check servedist:express",
+    "share:express": "npm-run-all --parallel prestartmsg security-check servedist:express localtunnel",
+    "security-check": "nsp check",
+    "servedist:webpack": "webpack-dev-server --inline --content-base dist/ --history-api-fallback",
+    "servedist:express": "babel-node buildscripts/distServer.js",
+    "localtunnel": "lt --port 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.0.41",
+    "@types/react-dom": "^16.0.4",
+    "awesome-typescript-loader": "^4.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-latest": "^6.24.1",
+    "chalk": "^2.3.2",
+    "express": "^4.16.3",
+    "localtunnel": "^1.8.3",
+    "npm-run-all": "^4.1.2",
+    "nsp": "^3.2.1",
+    "open": "0.0.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
