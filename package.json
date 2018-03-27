@@ -14,7 +14,7 @@
     "security-check": "nsp check",
     "servedist:webpack": "webpack-dev-server --inline --content-base dist/ --history-api-fallback",
     "servedist:express": "babel-node buildscripts/distServer.js",
-    "localtunnel": "lt --port 8080",
+    "localtunnel": "lt --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
